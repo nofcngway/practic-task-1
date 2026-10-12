@@ -1,9 +1,15 @@
 .header {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.header__inner {
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  max-width: 1200px;
+  margin: 0 auto;
   padding: 16px 32px;
-  border-bottom: 1px solid #e5e5e5;
 }
 
 .header__logo {
@@ -11,14 +17,16 @@
   font-size: 24px;
   font-weight: 700;
   text-decoration: none;
+  transform: skewX(-20deg)
 }
 
-.header__nav a {
-  color: #525252;
+.header__link {
+  color: #171717;
   font-size: 20px;
   text-decoration: none;
+  transition: color 0.3s ease;
 }
 
-.header__nav a:hover {
-  color: red;
+.header__link:hover {
+  color: #525252;
 }

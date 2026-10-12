@@ -4,13 +4,17 @@ import './Header.css'
 function Header() {
   return (
     <header className="header">
-      <Link to="/" className="header__logo">
-        Store For Fun
-      </Link>
+      <div className="header__inner">
+        <Link to="/" className="header__logo">
+          StoreForFun
+        </Link>
 
-      <nav className="header__nav">
-        <Link to="/">Каталог</Link>
-      </nav>
+        <nav className="header__nav">
+          <Link to="/" className="header__link">
+            Категории
+          </Link>
+        </nav>
+      </div>
     </header>
   )
 }

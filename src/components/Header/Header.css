@@ -1,32 +1,31 @@
 .header {
-  border-bottom: 1px solid #e5e5e5;
+  border-bottom: 1px solid var(--color-border);
 }
 
 .header__inner {
   display: flex;
   align-items: center;
   justify-content: space-between;
-
-  max-width: 1200px;
+  max-width: var(--container-width);
   margin: 0 auto;
-  padding: 16px 32px;
+  padding: var(--container-padding);
 }
 
 .header__logo {
-  color: #171717;
+  color: var(--color-text);
   font-size: 24px;
   font-weight: 700;
   text-decoration: none;
-  transform: skewX(-20deg)
+  transform: skewX(-20deg);
 }
 
 .header__link {
-  color: #171717;
+  color: var(--color-text);
   font-size: 20px;
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
 .header__link:hover {
-  color: #525252;
+  color: var(--color-text-muted);
 }

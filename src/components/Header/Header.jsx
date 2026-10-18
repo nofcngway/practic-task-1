@@ -1,16 +1,17 @@
 import { Link } from 'react-router'
+import { ROUTES } from '../../shared/config/routes'
 import './Header.css'
 
-function Header() {
+const Header = () => {
   return (
     <header className="header">
       <div className="header__inner">
-        <Link to="/" className="header__logo">
+        <Link to={ROUTES.home} className="header__logo">
           StoreForFun
         </Link>
 
         <nav className="header__nav">
-          <Link to="/" className="header__link">
+          <Link to={ROUTES.categories} className="header__link">
             Категории
           </Link>
         </nav>

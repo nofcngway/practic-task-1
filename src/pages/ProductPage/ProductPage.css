@@ -1,0 +1,121 @@
+.product-page__back {
+  display: inline-block;
+  margin-bottom: 16px;
+  color: var(--color-text-muted);
+  font-size: 32px;
+  text-decoration: none;
+  transition: color var(--transition-fast);
+
+}
+
+.product-page__back:hover {
+  color: var(--color-text);
+}
+
+.product-page__content {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 32px;
+}
+
+.product-page__info {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.product-page__info p {
+  margin: 0;
+}
+
+.product-page__rating {
+  color: var(--color-text-muted);
+}
+
+.product-page__price {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+}
+
+.product-page__price-current {
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.product-page__price-old {
+  color: var(--color-text-muted);
+  text-decoration: line-through;
+}
+
+.product-page__discount {
+  color: var(--color-accent);
+  font-weight: 600;
+}
+
+.product-page__stock {
+  color: var(--color-accent);
+}
+
+.product-page__description {
+  line-height: 1.5;
+}
+
+.product-page__details {
+  margin: 8px 0 0;
+  border-top: 1px solid var(--color-border);
+}
+
+.product-page__detail {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 8px 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.product-page__detail-label {
+  color: var(--color-text-muted);
+}
+
+.product-page__detail-value {
+  text-align: right;
+}
+
+.product-page__reviews {
+  margin-top: 48px;
+}
+
+.product-page__reviews-title {
+  margin: 0 0 16px;
+}
+
+.product-page__reviews-list {
+  display: grid;
+  gap: 12px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.product-page__review {
+  padding: 16px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-card);
+}
+
+.product-page__review-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  color: var(--color-text-muted);
+}
+
+.product-page__review-author {
+  color: var(--color-text);
+  font-weight: 600;
+}
+
+.product-page__review-text {
+  margin: 0;
+}

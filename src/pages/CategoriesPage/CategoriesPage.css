@@ -10,3 +10,10 @@
 .categories-page__item {
   min-width: 0;
 }
+
+@media (max-width: 480px) {
+  .categories-page__list {
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 12px;
+  }
+}

@@ -15,13 +15,27 @@
     transform var(--transition-fast);
 }
 
-.category-card:hover {
-  border-color: var(--color-border-hover);
-  background-color: var(--color-bg-hover);
-  transform: translateY(-2px);
+@media (hover: hover) {
+  .category-card:hover {
+    border-color: var(--color-border-hover);
+    background-color: var(--color-bg-hover);
+    transform: translateY(-2px);
+  }
 }
 
 .category-card__title {
   font-size: 17px;
   font-weight: 500;
+  text-align: center;
+}
+
+@media (max-width: 480px) {
+  .category-card {
+    min-height: 72px;
+    padding: 16px;
+  }
+
+  .category-card__title {
+    font-size: 15px;
+  }
 }

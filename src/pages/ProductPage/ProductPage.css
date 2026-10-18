@@ -38,7 +38,7 @@
 }
 
 .product-page__price-current {
-  font-size: 32px;
+  font-size: var(--font-size-price);
   font-weight: 700;
 }
 
@@ -117,4 +117,31 @@
 
 .product-page__review-text {
   margin: 0;
+}
+
+@media (max-width: 768px) {
+  .product-page__content {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .product-page__reviews {
+    margin-top: 32px;
+  }
+}
+
+@media (max-width: 480px) {
+  .product-page__detail {
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  .product-page__detail-value {
+    text-align: left;
+  }
+
+  .product-page__review-header {
+    flex-wrap: wrap;
+    gap: 4px 12px;
+  }
 }

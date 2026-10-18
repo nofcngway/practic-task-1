@@ -39,10 +39,19 @@
   object-fit: contain;
 }
 
-.product-gallery__thumb:hover {
-  border-color: var(--color-border-hover);
+@media (hover: hover) {
+  .product-gallery__thumb:hover {
+    border-color: var(--color-border-hover);
+  }
 }
 
 .product-gallery__thumb_active {
   border-color: var(--color-text);
+}
+
+@media (max-width: 480px) {
+  .product-gallery__thumb {
+    width: 56px;
+    height: 56px;
+  }
 }

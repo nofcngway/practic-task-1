@@ -1,5 +1,5 @@
 .status-message {
   margin: 0;
   color: var(--color-text-muted);
-  font-size: 32px;
+  font-size: var(--font-size-status);
 }

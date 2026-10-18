@@ -14,5 +14,19 @@
   --container-width: 1200px;
   --container-padding: 16px 32px;
 
+  --font-size-title: 32px;
+  --font-size-status: 32px;
+  --font-size-price: 32px;
+
   --transition-fast: 180ms ease;
+}
+
+@media (max-width: 480px) {
+  :root {
+    --container-padding: 12px 16px;
+
+    --font-size-title: 24px;
+    --font-size-status: 22px;
+    --font-size-price: 26px;
+  }
 }

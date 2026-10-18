@@ -1,5 +1,7 @@
 .page-title {
   margin: 0 0 12px;
   color: var(--color-text);
+  font-size: var(--font-size-title);
   font-weight: 700;
+  overflow-wrap: anywhere;
 }

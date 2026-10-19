@@ -11,7 +11,7 @@ SPA-каталог товаров интернет-магазина на React �
 - **Страница товара** — галерея фото, цена со скидкой, наличие, характеристики и отзывы.
 - **Страница 404** для несуществующих адресов
 - Состояния загрузки, ошибки и пустого списка на каждой странице.
-- Кэширование запросов через RTK Query: при повторном переходе на страницу данные не загружаются заново.
+- Кэширование запросов через RTK Query.
 - Адаптивность.
 
 ## Стек
@@ -20,7 +20,7 @@ SPA-каталог товаров интернет-магазина на React �
 - React Router 8
 - Redux Toolkit + RTK Query
 - CSS
-- Vite
+- Webpack
 - ESLint + Prettier
 
 ## Зависимости
@@ -29,7 +29,7 @@ SPA-каталог товаров интернет-магазина на React �
 
 | Пакет | Назначение |
 |---|---|
-| `react`, `react-dom` | UI-библиотека |
+| `react`, `react-dom` | Компоненты и рендеринг интерфейса |
 | `react-router` | Маршрутизация |
 | `@reduxjs/toolkit` | Хранилище состояния и RTK Query для запросов к API |
 | `react-redux` | Связка React и Redux |
@@ -38,7 +38,13 @@ SPA-каталог товаров интернет-магазина на React �
 
 | Пакет | Назначение |
 |---|---|
-| `vite`, `@vitejs/plugin-react` | Сборка и dev-сервер |
+| `webpack`, `webpack-cli` | Сборка проекта |
+| `webpack-dev-server` | Dev-сервер |
+| `babel-loader`, `@babel/core`, `@babel/preset-env`, `@babel/preset-react` | Преобразование JSX и современного JS |
+| `css-loader`, `style-loader` | Подключение CSS из компонентов |
+| `mini-css-extract-plugin` | Вынос CSS в отдельный файл в production-сборке |
+| `html-webpack-plugin` | Генерация `index.html` с подключёнными скриптами и стилями |
+| `copy-webpack-plugin` | Копирование файлов из `public/` в сборку |
 | `eslint` + плагины `react-hooks`, `react-refresh` | Проверка кода |
 | `prettier`, `eslint-config-prettier` | Форматирование кода |
 
@@ -47,7 +53,41 @@ SPA-каталог товаров интернет-магазина на React �
 Требуется Node.js 20+.
 
 ```bash
-git clone <URL_репозитория>.git
+git clone https://github.com/nofcngway/practic-task-1.git
 cd practic-task-1
 npm install
 npm run dev
+```
+
+Приложение откроется на <http://localhost:3000>.
+
+### Скрипты
+
+| Команда | Что делает |
+|---|---|
+| `npm run dev` | Dev-сервер на <http://localhost:3000> |
+| `npm run build` | Production-сборка в папку `dist/` |
+| `npm run preview` | Production-версия на <http://localhost:3001> |
+| `npm run lint` | Проверка кода ESLint |
+| `npm run lint:fix` | Автоисправление ошибок ESLint |
+| `npm run format` | Форматирование кода Prettier |
+| `npm run format:check` | Проверка форматирования без изменений |
+
+## Сборка
+
+Проект собирается через Webpack, конфигурация в [`webpack.config.js`](webpack.config.js):
+
+- JSX и JS обрабатываются Babel;
+- в development CSS подключается через `<style>`, в production выносится в отдельный файл;
+- в production к именам файлов добавляется хеш содержимого для кэширования;
+
+## Структура проекта
+
+```text
+src/
+├── app/          # Корень приложения: маршруты, глобальные стили
+├── pages/        # Страницы
+├── components/   # Компоненты для страниц
+├── shared/       # Переиспользуемые компоненты и конфиг маршрутов
+└── store/        # Redux store и RTK Query API
+```
